@@ -6,7 +6,7 @@ from src.dummy import Dummy
 class DummyTest(unittest.TestCase):
     def test_something(self):
         dummy = Dummy()
-        self.assertEqual(True, True)
+        self.assertEqual(True, False)
 
 
 if __name__ == '__main__':
