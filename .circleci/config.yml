@@ -12,7 +12,7 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: -m unittest test
+          command: python -m unittest test
           name: Test
 
 checkout:
