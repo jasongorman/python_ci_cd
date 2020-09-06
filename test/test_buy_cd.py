@@ -10,7 +10,7 @@ class BuyCdTest(unittest.TestCase):
     def test_cd_in_stock_payment_accepted(self):
         payments = Payments()
         payments.pay = MagicMock(return_value=True)
-        cd = CompactDisc(9.99, 10, payments)
+        cd = CompactDisc("", "", 9.99, 10, payments)
         card = CreditCard()
         cd.buy(1, card)
         self.assertEqual(9, cd.stock)

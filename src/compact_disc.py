@@ -1,5 +1,7 @@
 class CompactDisc(object):
-    def __init__(self, price, stock, payments):
+    def __init__(self, artist, title, price, stock, payments):
+        self.title = title
+        self.artist = artist
         self.price = price
         self.payments = payments
         self.stock = stock
@@ -7,3 +9,4 @@ class CompactDisc(object):
     def buy(self, quantity, card):
         if self.payments.pay(self.price, card):
             self.stock -= quantity
+
