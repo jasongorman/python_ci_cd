@@ -15,6 +15,10 @@ jobs:
           command: ./manage.py test
           name: Test
 
+checkout:
+  post:
+    - pip install -U pip setuptools virtualenv
+
 workflows:
   main:
     jobs:
